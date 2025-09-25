@@ -30,7 +30,7 @@ return {
         server_config = u.merge(server_config, user_config.lsp.servers[server].opts)
       end
 
-      lspconfig[server].setup(server_config)
+      vim.lsp.enable(server, server_config)
     end
 
     for config_server, config_opt in pairs(user_config.lsp.servers) do
